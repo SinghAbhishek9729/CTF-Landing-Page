@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react'
 
 const navItems = ['Home', 'About', 'Themes', 'Timeline', 'Sponsors', 'Mentors', 'FAQ', 'Contact']
+const assetPath = (fileName) => `${import.meta.env.BASE_URL}assets/${fileName}`
 
 const themes = [
   {
@@ -173,8 +174,8 @@ function App() {
       <header className="site-header">
         <div className="container nav-wrap">
           <div className="brand-cluster" aria-label="NIET and Cyber Invaders branding">
-            <img src="/assets/NIET_Logo.webp" alt="NIET Greater Noida" className="brand-logo brand-logo--niet" />
-            <img src="/assets/Cyber_Invaders_log.webp" alt="Cyber Invaders" className="brand-logo brand-logo--invaders" />
+            <img src={assetPath('NIET_Logo.webp')} alt="NIET Greater Noida" className="brand-logo brand-logo--niet" />
+            <img src={assetPath('Cyber_Invaders_log.webp')} alt="Cyber Invaders" className="brand-logo brand-logo--invaders" />
           </div>
 
           <nav className={`main-nav ${menuOpen ? 'open' : ''}`} aria-label="Main navigation">
@@ -407,7 +408,7 @@ function App() {
               <h3>Cyber challenge energy in motion.</h3>
             </div>
             <div className="gallery-grid">
-              <img src="/assets/cybersecurity_background.webp" alt="Cybersecurity hacker environment" loading="lazy" />
+              <img src={assetPath('cybersecurity_background.webp')} alt="Cybersecurity hacker environment" loading="lazy" />
               <div className="gallery-panel">
                 <span>LIVE HACK</span>
                 <strong>Secure ideas.</strong>
@@ -462,8 +463,8 @@ function App() {
         <div className="container footer-grid">
           <div className="footer-brand">
             <div className="brand-mark">
-              <img src="/assets/NIET_Logo.webp" alt="NIET Greater Noida" className="brand-logo brand-logo--small" />
-              <img src="/assets/Cyber_Invaders_log.webp" alt="Cyber Invaders" className="brand-logo brand-logo--small" />
+              <img src={assetPath('NIET_Logo.webp')} alt="NIET Greater Noida" className="brand-logo brand-logo--small" />
+              <img src={assetPath('Cyber_Invaders_log.webp')} alt="Cyber Invaders" className="brand-logo brand-logo--small" />
             </div>
             <p className="footer-title">NIET Greater Noida × Cyber Invaders</p>
             <p>Cybersecurity Hackathon</p>
